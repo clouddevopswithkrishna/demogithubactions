@@ -1,0 +1,8 @@
+name: JavaProg
+on:
+  workflow_dispatch
+jobs:
+  say-hello-inline-bash:
+    runs-on: ubuntu-24.04
+    steps:
+      - run: echo "Hello from Inline bash script in Github Actions workflow"
