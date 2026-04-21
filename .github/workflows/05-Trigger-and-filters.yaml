@@ -44,4 +44,5 @@ jobs:
               # Executes shell commands
               run: |
                 echo "== $GITHUB_EVENT_NAME payload ==="   # Prints the event name (push, pull_request, etc.)
+                 echo "RUNNING CAT"
                 cat "$GITHUB_EVENT_PATH"                  # Prints full JSON payload of the event
