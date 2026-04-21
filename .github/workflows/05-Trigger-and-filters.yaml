@@ -1,25 +1,47 @@
+# Name of the workflow (appears in GitHub Actions UI)
 name: Trigger Events
+
+# Defines when this workflow should run
 on:
+
+    # Trigger when code is pushed
     push:
         branches:
-            - "example-branch/*"
+            - "example-branch/*"   # Only runs for branches like example-branch/feature1, example-branch/test, etc.
+
+    # Trigger when pull request events happen
     pull_request:
         types:
-            - opened
-            - synchronize
-            - reopened
+            - opened              # When PR is created
+            - synchronize         # When new commits are pushed to the PR
+            - reopened            # When a closed PR is reopened
         paths:
-            - "03-core-features/filters/*.md"
-            - "!03-core-features/filters/*.txt"
-    
+            - "03-core-features/filters/*.md"   # Only if .md files in this folder are changed
+            - "!03-core-features/filters/*.txt" # Excludes .txt files from triggering
+
+    # Scheduled trigger (like cron job)
     schedule:
-        - cron: "0 0 * * *"
+        - cron: "0 0 * * *"       # Runs every day at midnight (UTC)
+
+    # Manual trigger from GitHub UI
     workflow_dispatch:
+
+# Defines jobs (units of work)
 jobs:
+
+    # Job name (can be anything)
     echo-event:
-        runs-on: ubuntu-24.04
+
+        # Specifies the runner (VM) to execute the job
+        runs-on: ubuntu-24.04     # Uses Ubuntu 24.04 environment
+
+        # Steps to execute inside the job
         steps:
+
+            # Step name (just for readability in UI)
             - name: Dump Full Event JSON
+
+              # Executes shell commands
               run: |
-                echo "== $GITHUB_EVENT_NAME payload ==="
-                cat "$GITHUB_EVENT_PATH"
+                echo "== $GITHUB_EVENT_NAME payload ==="   # Prints the event name (push, pull_request, etc.)
+                cat "$GITHUB_EVENT_PATH"                  # Prints full JSON payload of the event
