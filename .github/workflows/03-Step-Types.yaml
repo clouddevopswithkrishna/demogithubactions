@@ -1,0 +1,25 @@
+name: Step Types
+
+on:
+    workflow_dispatch:
+
+jobs:
+    say-hello-inline-bash:
+        runs-on: ubuntu-24.04
+        steps:
+          - run: echo "Hello World!! from the bash script"
+
+    say-hello-inline-python:
+        runs-on: ubuntu-24.04
+        steps:
+          - run: print("Hello World! from pyhton script")
+            shell: python
+
+    say-hello-inline-action:
+        runs-on: ubuntu-24.04
+        steps:
+          - uses: actions/hello-world-javascript-action@ad41a6c27317e688719c813b0d6a25685a9bce54
+            with:
+                who-to-greet: "from an action in the githuib action market place"
+
+
