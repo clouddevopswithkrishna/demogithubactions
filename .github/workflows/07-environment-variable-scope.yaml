@@ -16,20 +16,20 @@ jobs:
         steps:
          - name: Inspect scopes job 1 step 1
            env:
-            STEP_VAR1: IAM_STEP_SCOPED
+            STEP1_VAR1: IAM_STEP_SCOPED
            run: |
              echo "Workflow_VAR: $WORKFLOW_VAR"
              echo "JOB_VAR: $JOB_VAR"
-             echo "STEP_VAR1: $STEP1_VAR"
+             echo "STEP1_VAR1: $STEP_VAR1"
             
          - name: Inspect scopes job 1 step 2
            env:
-            STEP_VAR2: IAM_SECOND_STEP_SCOPED
+            STEP2_VAR2: IAM_SECOND_STEP_SCOPED
            run: |
              echo "Workflow_VAR: $WORKFLOW_VAR"
              echo "JOB_VAR: $JOB_VAR"
-             echo "STEP_VAR1: $STEP1_VAR"
-             echo "STEP_VAR2: $STEP2_VAR"
+             echo "STEP1_VAR1: $STEP1_VAR1"
+             echo "STEP2_VAR2: $STEP2_VAR2"
     job-2:
         runs-on: ubuntu-latest
         steps:
@@ -37,4 +37,5 @@ jobs:
            run: |
              echo "Workflow_VAR: $WORKFLOW_VAR"
              echo "JOB_VAR: $JOB_VAR"
-             echo "STEP_VAR: $STEP_VAR"
+             echo "STEP1_VAR1: $STEP1_VAR1"
+             echo "STEP2_VAR2: $STEP2_VAR2"
