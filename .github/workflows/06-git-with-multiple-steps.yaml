@@ -18,6 +18,7 @@ jobs:
 
         # - name: Run Tests
         #   run: npm test
-
+        - name: Give Execute Permission
+          run: chmod +x deploy.sh
         - name: Deploy Script
           run: ./deploy.sh
