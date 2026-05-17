@@ -10,7 +10,7 @@ env:
 
 jobs:
     job-1:
-        runs-on: ubuntu-24-04
+        runs-on: ubuntu-latest
         env:
             JOB_VAR: IAM_JOB_SCOPED
         steps:
@@ -30,7 +30,7 @@ jobs:
              echo "JOB_VAR: $JOB_VAR
              echo "STEP_VAR: $STEP_VAR"
     job-2:
-        runs-on: ubuntu-24-04
+        runs-on: ubuntu-latest
         steps:
          - name: Inspect scopes job 2 step 2
            run: |
