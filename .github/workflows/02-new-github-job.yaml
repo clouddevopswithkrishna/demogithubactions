@@ -1,4 +1,4 @@
-name: JavaProg
+name: 02-JavaProg
 on:
   workflow_dispatch
 jobs:
