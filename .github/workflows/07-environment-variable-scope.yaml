@@ -24,7 +24,7 @@ jobs:
             
          - name: Inspect scopes job 1 step 2
            env:
-            STEP_VAR: IAM_STEP_SCOPED
+            STEP_VAR: IAM_SECOND_STEP_SCOPED
            run: |
              echo "Workflow_VAR: $WORKFLOW_VAR"
              echo "JOB_VAR: $JOB_VAR"
