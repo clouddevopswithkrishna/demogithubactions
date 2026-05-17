@@ -1,4 +1,4 @@
-name: Workflow, Jobs, Steps
+name: 04-Workflow, Jobs, Steps
 
 on:
     workflow_dispatch:

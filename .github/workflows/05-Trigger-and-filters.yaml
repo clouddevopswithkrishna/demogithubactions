@@ -1,5 +1,5 @@
 # Name of the workflow (appears in GitHub Actions UI)
-name: Trigger Events
+name: 05-Trigger Events
 
 # Defines when this workflow should run
 on:
