@@ -1,4 +1,4 @@
-name: 01-HelloWorld
+name: 06-Git-With-Multiple-Steps
 on:
   workflow_dispatch
 jobs:
