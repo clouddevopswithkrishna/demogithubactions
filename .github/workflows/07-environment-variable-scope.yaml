@@ -20,7 +20,7 @@ jobs:
            run: |
              echo "Workflow_VAR: $WORKFLOW_VAR"
              echo "JOB_VAR: $JOB_VAR"
-             echo "STEP1_VAR1: $STEP_VAR1"
+             echo "STEP1_VAR1: $STEP1_VAR1"
             
          - name: Inspect scopes job 1 step 2
            env:
